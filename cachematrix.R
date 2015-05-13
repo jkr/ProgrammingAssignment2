@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## This initializes a matrix-like object: actually a list whose
+## elements are object "methods." The variables in the function close
+## over the makeCacheMatrix function.
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
@@ -21,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Uses a matrix-like object from makeCacheMatrix. Checks to see if
+## inv is cached. If it is, it uses it. If not, it figures it out, and
+## then caches it.
 
 cacheSolve <- function(x, ...) {
     inv <- x$getinv()
